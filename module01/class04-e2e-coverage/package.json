@@ -6,12 +6,20 @@
   "scripts": {
     "start": "node src/api.js",
     "start:dev": "node --watch src/api.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha src/*.spec.js",
+    "test:dev": "npx mocha -w src/*.spec.js",
+    "test:cov": "npx nyc npx mocha src/*.spec.js"
   },
   "keywords": [],
   "engines": {
     "node": "18"
   },
   "author": "antony-gp",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "sinon": "^15.0.1",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "supertest": "^6.3.3"
+  }
 }

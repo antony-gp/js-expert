@@ -74,7 +74,7 @@ const routes = [
   },
 ];
 
-http
+const app = http
   .createServer(async (request, response) => {
     try {
       const { url, method } = request;
@@ -90,3 +90,5 @@ http
   .listen(3000, () => {
     console.log("Listening on 3000");
   });
+
+module.exports = { app, tokens, responses };
