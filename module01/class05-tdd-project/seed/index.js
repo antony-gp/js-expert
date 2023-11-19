@@ -52,7 +52,7 @@ const write = async (filename, data) =>
   writeFile(join(databaseFolder, filename), JSON.stringify(data, null, 2));
 
 (async () => {
-  await write("users.json", users).catch(console.log);
+  await write("users.json", users);
   await write("cars.json", cars);
   await write("car-categories.json", carCategories);
 })();
