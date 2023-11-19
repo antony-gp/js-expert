@@ -1,0 +1,32 @@
+[
+  {
+    "id": "e7279e6b-62d3-4126-9957-db1491ac534d",
+    "name": "SUV",
+    "carIds": [
+      "7d5cdd5d-8f02-4d14-8d54-a912ae8cca89",
+      "92a690d1-f324-4f5c-af96-6e4c15d98394",
+      "9d9678dd-60fc-4a2b-a725-56fe9f049d9c"
+    ],
+    "price": 48.63
+  },
+  {
+    "id": "d19de94b-239c-4868-877f-832a8fa87f92",
+    "name": "Sedan",
+    "carIds": [
+      "995a305b-8c79-4b71-8695-5f4157289f31",
+      "47f1d681-f596-4b25-966f-8f456ccb7f4a",
+      "530c8d66-27ce-487c-92ef-bbf364ea280c"
+    ],
+    "price": 98.72
+  },
+  {
+    "id": "c8ca1b7b-673b-4a1a-aa34-c24dbdb19114",
+    "name": "Convertible",
+    "carIds": [
+      "5ab0de9a-5576-4cea-ab2e-76194561dacb",
+      "ee62341b-ee24-47d3-827e-c02ad81f286b",
+      "023f4934-dfb4-4391-adcd-7ef042f2129e"
+    ],
+    "price": 85.9
+  }
+]

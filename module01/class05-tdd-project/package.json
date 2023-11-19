@@ -1,0 +1,25 @@
+{
+  "name": "class05-tdd-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha **/*.spec.js",
+    "test:dev": "npx mocha -w **/*.spec.js",
+    "test:cov": "npx nyc npx mocha **/*.spec.js",
+    "seed": "node ./seed"
+  },
+  "keywords": [],
+  "engines": {
+    "node": "18"
+  },
+  "author": "antony-gp",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^15.0.1",
+    "chai": "^4.3.10"
+  }
+}

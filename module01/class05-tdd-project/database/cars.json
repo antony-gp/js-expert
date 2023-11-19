@@ -1,0 +1,92 @@
+[
+  {
+    "id": "7d5cdd5d-8f02-4d14-8d54-a912ae8cca89",
+    "name": "Impala",
+    "brand": "Mazda",
+    "releaseYear": 2014,
+    "manual": true,
+    "traction": "FWD",
+    "fuelType": "Electric",
+    "available": true
+  },
+  {
+    "id": "92a690d1-f324-4f5c-af96-6e4c15d98394",
+    "name": "Model Y",
+    "brand": "Dodge",
+    "releaseYear": 2022,
+    "manual": true,
+    "traction": "RWD",
+    "fuelType": "Diesel",
+    "available": false
+  },
+  {
+    "id": "9d9678dd-60fc-4a2b-a725-56fe9f049d9c",
+    "name": "F-150",
+    "brand": "Nissan",
+    "releaseYear": 2017,
+    "manual": true,
+    "traction": "AWD",
+    "fuelType": "Gasoline",
+    "available": true
+  },
+  {
+    "id": "995a305b-8c79-4b71-8695-5f4157289f31",
+    "name": "911",
+    "brand": "Fiat",
+    "releaseYear": 2022,
+    "manual": true,
+    "traction": "RWD",
+    "fuelType": "Gasoline",
+    "available": false
+  },
+  {
+    "id": "47f1d681-f596-4b25-966f-8f456ccb7f4a",
+    "name": "2",
+    "brand": "Cadillac",
+    "releaseYear": 2023,
+    "manual": true,
+    "traction": "RWD",
+    "fuelType": "Gasoline",
+    "available": true
+  },
+  {
+    "id": "530c8d66-27ce-487c-92ef-bbf364ea280c",
+    "name": "2",
+    "brand": "Jeep",
+    "releaseYear": 2016,
+    "manual": false,
+    "traction": "AWD",
+    "fuelType": "Hybrid",
+    "available": false
+  },
+  {
+    "id": "5ab0de9a-5576-4cea-ab2e-76194561dacb",
+    "name": "Sentra",
+    "brand": "Cadillac",
+    "releaseYear": 2013,
+    "manual": false,
+    "traction": "AWD",
+    "fuelType": "Hybrid",
+    "available": false
+  },
+  {
+    "id": "ee62341b-ee24-47d3-827e-c02ad81f286b",
+    "name": "Accord",
+    "brand": "Maserati",
+    "releaseYear": 2016,
+    "manual": true,
+    "traction": "FWD",
+    "fuelType": "Hybrid",
+    "available": true
+  },
+  {
+    "id": "023f4934-dfb4-4391-adcd-7ef042f2129e",
+    "name": "Accord",
+    "brand": "Rolls Royce",
+    "releaseYear": 2014,
+    "manual": false,
+    "traction": "RWD",
+    "fuelType": "Gasoline",
+    "available": true
+  }
+]
