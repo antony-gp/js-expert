@@ -1,0 +1,31 @@
+{
+  "name": "demo02-esmodules-intl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "npx nodemon --ignore database.json --experimental-json-modules --experimental-top-level-await src/index.js",
+    "test": "npx mocha --parallel test/*.spec.js",
+    "test:dev": "npx mocha -w --parallel test/*.spec.js",
+    "test:cov": "npx nyc npx mocha -r reify --parallel test/*.spec.js"
+  },
+  "author": "antony-gp",
+  "license": "ISC",
+  "engines": {
+    "node": "14.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "chalk-table": "^1.0.2",
+    "draftlog": "^1.0.12"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "nyc": "^15.1.0",
+    "reify": "^0.20.12",
+    "sinon": "^9.2.1"
+  }
+}
