@@ -1,0 +1,46 @@
+144.288.400.12
+123.452.789-00
+987.654.321/99
+
+Only second line matches
+^\d{3}\.\d{3}\.\d{3}-\d{2}$
+
+Only . and - match
+[-.]
+-|\.
+
+-------------------------------------------
+
+Silva, Teste
+Pereira, Antony
+Grossert, Iara
+
+Using the following expression:
+^(\w+),\s(\w+)$
+
+With replace:
+{ "name": "$2", "surname": "$1" }
+
+Would result in:
+
+{ "name": "Teste", "surname": "Silva" }
+{ "name": "Antony", "surname": "Pereira" }
+{ "name": "Iara", "surname": "Grossert" }
+
+-------------------------------------------
+
+A [text](http://text.com) with [various](https://various.com):
+
+[LINKS!](http://link.com)
+
+Using the following expression:
+\[(.+?)\]\((.+?)\)
+
+With replace:
+<a href="$2">$1</a>
+
+Would result in:
+
+A <a href="http://text.com">text</a> with <a href="https://various.com">various</a>:
+
+<a href="http://link.com">LINKS!</a>
