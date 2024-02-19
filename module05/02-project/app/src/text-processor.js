@@ -1,3 +1,5 @@
+const { evaluateExpression } = require("./utils");
+
 // FluentAPI: allows chaining methods until a "done" method is called
 class TextProcessor {
   #content = "";
@@ -13,10 +15,29 @@ class TextProcessor {
     // (.*\n.*?) matches anything until linebreak, then matches linebreak, then matches anything until linebreak again, stopping at first occurence
     // $ matches only if previous serach ends at line end
     // Modifiers: g (global), i (case insensitive), m (multiline)
-    const peopleDataRegex =
-      /(?<=(?<=contratante|contratada):\s{1})(?!\s)(.*\n.*?)$/gim;
+    const peopleDataRegex = evaluateExpression(
+      /(?<=(?<=contratante|contratada):\s{1})(?!\s)(.*\n.*?)$/gim
+    );
 
     this.#content = this.#content.match(peopleDataRegex);
+
+    return this;
+  }
+
+  peopleDataToColumns() {
+    const splitRegex = evaluateExpression(/,/);
+
+    this.#content = this.#content.map((line) => line.split(splitRegex));
+
+    return this;
+  }
+
+  removeEmptyCharacters() {
+    const replaceRegex = evaluateExpression(/^\s|\s+$|\n/g);
+
+    this.#content = this.#content.map((line) =>
+      line.map((text) => text.replace(replaceRegex, ""))
+    );
 
     return this;
   }
