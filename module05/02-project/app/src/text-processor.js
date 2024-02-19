@@ -1,3 +1,4 @@
+const Person = require("./person");
 const { evaluateExpression } = require("./utils");
 
 // FluentAPI: allows chaining methods until a "done" method is called
@@ -38,6 +39,12 @@ class TextProcessor {
     this.#content = this.#content.map((line) =>
       line.map((text) => text.replace(replaceRegex, ""))
     );
+
+    return this;
+  }
+
+  mapPerson() {
+    this.#content = this.#content.map((args) => new Person(args));
 
     return this;
   }

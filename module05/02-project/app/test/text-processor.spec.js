@@ -4,6 +4,9 @@ const { expect } = require("chai");
 const TextProcessor = require("../src/text-processor");
 const mocks = {
   valid: require("./mocks/textProcessor/valid"),
+};
+
+const expected = {
   extractPeopleData: [
     "Xuxa da Silva, brasileira, casada, CPF 235.743.420-12, residente e \n" +
       "domiciliada a Rua dos bobos, zero, bairro Alphaville, São Paulo. ",
@@ -36,6 +39,18 @@ const mocks = {
       "São Paulo.",
     ],
   ],
+  mapPerson: [
+    {
+      name: "Xuxa da Silva",
+      nationality: "Brasileira",
+      maritalStatus: "Casada",
+      document: "23574342012",
+      address: "Rua dos bobos",
+      number: "zero",
+      neighborhood: "Alphaville",
+      city: "São Paulo",
+    },
+  ],
 };
 
 describe("TextProcessor", () => {
@@ -48,22 +63,30 @@ describe("TextProcessor", () => {
   it("extractPeopleData", () => {
     const res = new TextProcessor(mocks.valid).extractPeopleData().build();
 
-    expect(res).to.be.deep.equal(mocks.extractPeopleData);
+    expect(res).to.be.deep.equal(expected.extractPeopleData);
   });
 
   it("peopleDataToColumns", () => {
-    const res = new TextProcessor([mocks.extractPeopleData[0]])
+    const res = new TextProcessor([expected.extractPeopleData[0]])
       .peopleDataToColumns()
       .build();
 
-    expect(res).to.be.deep.equal(mocks.peopleDataToColumns);
+    expect(res).to.be.deep.equal(expected.peopleDataToColumns);
   });
 
   it("removeEmptyCharacters", () => {
-    const res = new TextProcessor(mocks.peopleDataToColumns)
+    const res = new TextProcessor(expected.peopleDataToColumns)
       .removeEmptyCharacters()
       .build();
 
-    expect(res).to.be.deep.equal(mocks.removeEmptyCharacters);
+    expect(res).to.be.deep.equal(expected.removeEmptyCharacters);
+  });
+
+  it("mapPerson", () => {
+    const res = new TextProcessor(expected.removeEmptyCharacters)
+      .mapPerson()
+      .build();
+
+    expect(res).to.be.deep.equal(expected.mapPerson);
   });
 });
