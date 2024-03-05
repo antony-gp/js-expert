@@ -1,0 +1,21 @@
+{
+  "name": "abstract-factory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.spec.js",
+  "type": "module",
+  "scripts": {
+    "web": "npx http-server . -p 3000",
+    "server": "node index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
