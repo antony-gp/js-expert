@@ -1,0 +1,16 @@
+{
+  "name": "test-data-builder-object-mother",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/**/**/*.spec.js"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC"
+}
