@@ -1,0 +1,23 @@
+{
+  "name": "decorator-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node example/http-server.js",
+    "start:dev": "node --watch example/http-server.js",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' npx jest -i -c jest.config.js",
+    "test:dev": "NODE_OPTIONS='--experimental-vm-modules' npx jest -i --watch -c jest.config.js",
+    "test:cov": "NODE_OPTIONS='--experimental-vm-modules' npx jest -c jest.config.js --coverage"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
