@@ -1,6 +1,6 @@
 # Task Checklist
 
-- [ ] creates `src` main folder if it not exists
+- [x] creates `src` main folder if it not exists
 
 - [x] creates `repository` layer
 
@@ -10,7 +10,7 @@
 
 - [ ] can create multiples domains with a single comand
 
-- [ ] saves files as `kebab-case` and classes as `PascalCase`
+- [x] saves files as `kebab-case`, variables as `camelCase` and classes as `PascalCase`
 
 - [ ] reaches **100% test coverage**
 
