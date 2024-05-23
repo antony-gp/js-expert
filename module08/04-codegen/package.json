@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "codegen": "./src/index.js"
+  },
   "scripts": {
+    "start": "NODE_ENV=dev node src create -c 'test env'",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest -i --no-cache --watch -c jest.config.mjs",
     "test:cov": "NODE_OPTIONS='--experimental-vm-modules --no-experimental-fetch' npx jest -c jest.config.mjs --coverage"
   },
@@ -16,5 +20,8 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
   }
 }

@@ -1,6 +1,6 @@
 import { expect, describe, test, jest, beforeEach } from "@jest/globals";
 
-import templates from "../../src/templates";
+import templates from "../../src/templates/index.js";
 import mocks from "./mocks";
 import { StringUtils } from "../../src/utils.js";
 

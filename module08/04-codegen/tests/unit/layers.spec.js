@@ -29,13 +29,28 @@ describe("Layers", () => {
     it("should create file only if folder already exists", async () => {
       jest.spyOn(fsPromises, fsPromises.mkdir.name);
       jest.spyOn(fsPromises, fsPromises.writeFile.name).mockResolvedValue();
-      jest.spyOn(fs, fs.existsSync.name).mockReturnValue(true);
+      jest
+        .spyOn(fs, fs.existsSync.name)
+        .mockReturnValue(false)
+        .mockReturnValueOnce(true);
 
       await layer.create();
 
       expect(fs.existsSync).toHaveBeenCalled();
       expect(fsPromises.mkdir).not.toHaveBeenCalled();
       expect(fsPromises.writeFile).toHaveBeenCalledTimes(defaultLayersCount);
+    });
+
+    it("should not create file if it already exists", async () => {
+      jest.spyOn(fsPromises, fsPromises.mkdir.name);
+      jest.spyOn(fsPromises, fsPromises.writeFile.name).mockResolvedValue();
+      jest.spyOn(fs, fs.existsSync.name).mockReturnValue(true);
+
+      await layer.create();
+
+      expect(fs.existsSync).toHaveBeenCalled();
+      expect(fsPromises.mkdir).not.toHaveBeenCalled();
+      expect(fsPromises.writeFile).not.toHaveBeenCalled();
     });
 
     it("should not create invalid layers", async () => {
@@ -49,7 +64,10 @@ describe("Layers", () => {
 
     it("should create only respository layer", async () => {
       jest.spyOn(fsPromises, fsPromises.writeFile.name).mockResolvedValue();
-      jest.spyOn(fs, fs.existsSync.name).mockReturnValue(true);
+      jest
+        .spyOn(fs, fs.existsSync.name)
+        .mockReturnValue(false)
+        .mockReturnValueOnce(true);
 
       const layerCount = 1;
 
@@ -61,7 +79,10 @@ describe("Layers", () => {
 
     it("should create service layer with respository as dependency", async () => {
       jest.spyOn(fsPromises, fsPromises.writeFile.name).mockResolvedValue();
-      jest.spyOn(fs, fs.existsSync.name).mockReturnValue(true);
+      jest
+        .spyOn(fs, fs.existsSync.name)
+        .mockReturnValue(false)
+        .mockReturnValueOnce(true);
 
       const layerCount = 2;
 
@@ -73,7 +94,10 @@ describe("Layers", () => {
 
     it("should create factory layer with service and respository as dependencies", async () => {
       jest.spyOn(fsPromises, fsPromises.writeFile.name).mockResolvedValue();
-      jest.spyOn(fs, fs.existsSync.name).mockReturnValue(true);
+      jest
+        .spyOn(fs, fs.existsSync.name)
+        .mockReturnValue(false)
+        .mockReturnValueOnce(true);
 
       const layerCount = 3;
 

@@ -1,0 +1,13 @@
+{
+  "name": "@antony-gp/04-codegen-mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC"
+}

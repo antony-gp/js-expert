@@ -1,7 +1,7 @@
 import fsPromises from "fs/promises";
 import fs from "fs";
 import { StringUtils } from "./utils.js";
-import templates from "./templates";
+import templates from "./templates/index.js";
 
 const { FactoryTemplate, RepositoryTemplate, ServiceTemplate } = templates;
 
@@ -49,10 +49,12 @@ export default class Layer {
       await fsPromises.mkdir(dirName, { recursive: true });
 
     await Promise.all(
-      layers.map((layer) => {
+      layers.map(async (layer) => {
         const { fileName, template } = this.#templates[layer];
 
-        return fsPromises.writeFile(`${dirName}/${fileName}`, template);
+        const path = `${dirName}/${fileName}`;
+
+        if (!fs.existsSync(path)) await fsPromises.writeFile(path, template);
       })
     );
   }
