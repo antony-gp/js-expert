@@ -1,0 +1,16 @@
+{
+  "name": "class01-node-error-handling",
+  "version": "1.0.0",
+  "main": "1-server-errror.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC",
+  "description": ""
+}
