@@ -1,0 +1,19 @@
+{
+  "name": "class03",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "serve:dev": "node --watch web-api.js",
+    "api0": "curl localhost:3000 | tee logs/api0.log",
+    "api1": "curl localhost:3001 | tee logs/api1.log",
+    "ex1": "node examples/1-concat-stream-async-iterators.js | tee logs/ex1.log"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}
