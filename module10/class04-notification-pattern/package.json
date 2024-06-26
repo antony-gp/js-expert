@@ -1,0 +1,16 @@
+{
+  "name": "class04-notification-pattern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "node --watch src"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC",
+  "description": ""
+}
