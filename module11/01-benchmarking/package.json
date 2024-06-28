@@ -1,0 +1,21 @@
+{
+  "name": "01-benchmarking",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src",
+    "start:dev": "node --watch src"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "uuid": "^10.0.0"
+  }
+}
