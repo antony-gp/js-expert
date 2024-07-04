@@ -1,0 +1,28 @@
+{
+  "name": "ex02-events",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "CLIMEM=8999 node --import climem .",
+    "climem": "npx climem 8999",
+    "autocannon": "npx autocannon -c 100 -d 30 -p 10 http://localhost:3000",
+    "flame-0x": "npx 0x -- node .",
+    "clinic-doctor": "npx clinic doctor -- node .",
+    "clinic-flame": "npx clinic flame -- node .",
+    "clinic-heapprofiler": "npx clinic heapprofiler -- node ."
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "0x": "^5.7.0",
+    "autocannon": "^7.15.0",
+    "climem": "^2.0.0",
+    "clinic": "^13.0.0"
+  }
+}
