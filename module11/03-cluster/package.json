@@ -1,0 +1,19 @@
+{
+  "name": "03-cluster",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autocannon": "^7.15.0"
+  }
+}
