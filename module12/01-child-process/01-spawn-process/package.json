@@ -1,0 +1,16 @@
+{
+  "name": "01-spawn-process",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC",
+  "description": ""
+}
