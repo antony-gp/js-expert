@@ -1,0 +1,22 @@
+{
+  "name": "01-image-combiner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:native": "node --watch src/native",
+    "start:piscina": "node --watch src/piscina"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "antony-gp",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "piscina": "^4.6.1",
+    "sharp": "^0.33.4"
+  }
+}
